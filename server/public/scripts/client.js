@@ -3,10 +3,10 @@ $(document).ready(readyNow);
 function readyNow() {
     console.log('jQuery Running');
     getMath(); // This is calling the getMath function on page load
-    $('#plus').on('click', ); // This is a click listener for plus
-    $('#subtract').on('click', ); // This is a click listener for subtract
-    $('#multiply').on('click', ); // This is a click listener for multiply
-    $('#divide').on('click', ); // This is a click listener for divide
+    $('#plus').on('click', theOperator); // This is a click listener for plus
+    $('#subtract').on('click', theOperator); // This is a click listener for subtract
+    $('#multiply').on('click', theOperator); // This is a click listener for multiply
+    $('#divide').on('click', theOperator); // This is a click listener for divide
     $('#equals').on('click', ); // This is a click listener for equals
     $('#clear').on('click', clearCurrentEquation); // This is a click listener for clearing the inputs
 
@@ -19,7 +19,11 @@ const dataToPost = {}; // Empty object to put data in to post to server
 let arrayForDom = []; // Empty array to hold the response from the server to the DOM
 // <GLOBAL>--------------------------------------------------------------------------------------
 
-
+function theOperator(){
+    console.log('In theOperator function');
+    const mathOperator = $(this).data('math');
+    dataToPost.mathOperator = mathOperator;
+} // End theOperator function
 
 // <GET LAND>------------------------------------------------------------------------------------
 function getMath(){
