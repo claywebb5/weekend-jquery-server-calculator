@@ -16,10 +16,10 @@
     <main>
         <div class="inputs-buttons">
             <input id="firstNumber" type="number" placeholder="First Input">
-            <button data-math="plus" id="plus">+</button>
-            <button data-math="subtract" id="subtract">-</button>
-            <button data-math="multiply" id="multiply">*</button>
-            <button data-math="divide" id="divide">/</button>
+            <button data-value="+" id="plus" class="op-button">+</button>
+            <button data-value="-" id="subtract" class="op-button">-</button>
+            <button data-value="*" id="multiply" class="op-button">*</button>
+            <button data-value="/" id="divide" class="op-button">/</button>
             <input id="secondNumber" type="number" placeholder="Second Input">
             <button id="equals">=</button>
             <button id="clear">C</button>
@@ -27,9 +27,8 @@
         <div class="current-result">
             <p>Answer: <span id="currentAnswer"></span></p>
         </div>
-        <div class="past-results">
-
-        </div>
+        <h2>Previous Solutions:</h2>
+        <ul class="pastAnswers"></ul>
     </main>
     <footer>
         <button id="clearAll">CLEAR ALL</button>
