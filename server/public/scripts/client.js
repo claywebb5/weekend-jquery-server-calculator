@@ -7,13 +7,12 @@ function readyNow() {
     $('#equals').on('click', postSolution); // This is a click listener for equals
     $('#clear').on('click', clearCurrentEquation); // This is a click listener for clearing the inputs
 
+
 } // End ready Now
 
 // <PAGE LOAD>------------------------------------------------------------------------------------
 
 // <GLOBAL>--------------------------------------------------------------------------------------
-const dataForServer = {}; // Empty object to put data in to post to server
-let arrayDataForDom = []; // Empty array to hold the response from the server to the DOM
 let mathOperator = ''; // Empty string to hold the math operator
 // <GLOBAL>--------------------------------------------------------------------------------------
 
@@ -83,15 +82,15 @@ function getMath(){
 
 function renderMath(response){
     $('#pastAnswers').empty(); // Clear past solutions
-    for(let data of response){
+    for(let item of response){
         $('#pastAnswers').append(`
-        <div>
-            ${data.firstNumber}
-            ${data.operator}
-            ${data.secondNumber}
+        <li>
+            ${item.firstNumber}
+            ${item.mathOperator}
+            ${item.secondNumber}
             =
-            ${data.total}
-        </div>`);
+            ${item.total}
+        </li>`);
     };
 } // End renderMath function
 

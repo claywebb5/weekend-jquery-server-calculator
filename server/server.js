@@ -38,6 +38,15 @@ function calculate(mathObject) {
         case '+':
             total = +firstNumber + +secondNumber;
             return total;
+        case '-':
+            total = firstNumber - secondNumber;
+            return total;
+        case '*':
+            total = firstNumber * secondNumber;
+            return total;
+        case '/':
+            total = firstNumber / secondNumber;
+            return total;
     }
 } // End calculate function
 
