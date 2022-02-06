@@ -11,9 +11,6 @@ app.use(bodyParser.urlencoded({extended:true}))
 
 // <GLOBAL>--------------------------------------------------------------------------------------
 const mathHistory = []; // Declaring empty array to store created objects
-// let arraySender = {}; // Declaring empty object to contain and send information to the DOM
-
-// arraySender.array = mathHistory; // Created a property for arraySender and set it equal to mathHistory
 // <GLOBAL>--------------------------------------------------------------------------------------
 
 // <POST LAND>------------------------------------------------------------------------------------
@@ -58,29 +55,6 @@ app.get('/math', function(req, res){
 })
 
 // <GET LAND>------------------------------------------------------------------------------------
-
-
-    // // Create corresponding properties for the currentMath object
-    // currentMath.firstNumber = req.body.firstNumber;
-    // currentMath.secondNumber = req.body.secondNumber;
-
-    // // if statement for plus
-    // if (req.body.theOperator == 'plus'){
-    //     currentMath.total = partsInt(req.body.firstNumber) + parseInt(req.body.secondNumber)
-    //     currentMath.operator = '+';
-    //     mathHistory.push(currentMath);
-    // }
-    // // if statement for subtract
-
-    // // if statement for multiply
-
-    // // if statement for divide
-    // console.log('arraySender is:', arraySender);
-    
-    
-
-
-
 
 // <BOTTOM>----------------------------------------------------------------------------------
 app.listen(PORT, () => {

@@ -6,8 +6,6 @@ function readyNow() {
     $('.op-button').on('click', theOperator); // This is a click listener for which operator
     $('#equals').on('click', postSolution); // This is a click listener for equals
     $('#clear').on('click', clearCurrentEquation); // This is a click listener for clearing the inputs
-
-
 } // End ready Now
 
 // <PAGE LOAD>------------------------------------------------------------------------------------
@@ -66,32 +64,14 @@ function getMath(){
 } // End getAddition function
 // <GET LAND>------------------------------------------------------------------------------------
 
-// function solution(){
-//     console.log('Running the solution function');
-//     const firstNumber = Number($('#firstNumber').val());
-//     const secondNumber = Number($('#secondNumber').val());
-//     dataForServer.firstNumber = firstNumber;
-//     dataForServer.secondNumber = secondNumber;
-
-//     postSolution(); // calling post to run when the solution function is run
-    
-//     // clearCurrentEquation(); // To clear the inputs when = is clicked
-// } // End solution function
-
-
-
 function renderMath(response){
-    $('#pastAnswers').empty(); // Clear past solutions
+    $('.pastAnswers').empty(); // Clear past solutions
     for(let item of response){
-        $('#pastAnswers').append(`
-        <li>
-            ${item.firstNumber}
-            ${item.mathOperator}
-            ${item.secondNumber}
-            =
-            ${item.total}
-        </li>`);
-    };
+        $('.pastAnswers').append(`
+        <li>${item.firstNumber} ${item.mathOperator} ${item.secondNumber}
+            = ${item.total}</li>
+        `);
+    }
 } // End renderMath function
 
 
